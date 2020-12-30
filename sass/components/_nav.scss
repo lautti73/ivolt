@@ -1,0 +1,178 @@
+@import "../abstract/abstract";
+
+.navegacion {
+    display: flex;
+    width: 100%;
+    background-color: $dblue;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 5%;
+    
+    font-family: $par;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    // .nav-container {
+    //     width: 90%;
+    //     margin: auto;
+    //     flex-wrap: wrap;
+    //     align-items: center;
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        
+        li {
+            margin-left: 2rem;
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            display: block;
+            border-bottom: 1px solid $white;
+            
+            &:first-of-type {
+                margin-top: .5rem;
+            }
+
+            a:hover {
+                color: $red;
+                transition: color 250ms;
+            }
+
+            
+        }
+
+        .signin {
+            display: inline-block;
+            border: 3px solid $lblue;
+            margin: 2rem 1rem 1rem 1.2rem;
+            &:hover {
+                border-color: $red;
+                background-color: $red;
+                transition: background-color 250ms, border-color 250ms;
+            }
+           
+            a {
+                padding: 1.25rem;
+                &:hover {
+                    color: $white;
+                }
+            }
+            
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        outline: none;
+        color: $white;
+    }
+
+   
+    .logo {
+        width: 35px;
+    }   
+   
+
+    .burger-btn {
+        color: $white;
+        border-color: $white;
+
+        .navbar-toggler-icon {
+            color: $white;
+            mix-blend-mode: lighten;
+        }
+    }
+
+    .active-page {
+        color: $lblue;
+        // padding-bottom: 1px;
+        // border-bottom: 1.5px solid $lblue;
+        }
+    
+    @include tablet {
+            flex-wrap: nowrap;
+        
+
+        .navbar-collapse {
+            justify-content: center;
+
+        }
+          ul {;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              li {
+                  border: none;
+                  margin-left: 3rem;
+
+                 &:first-of-type {
+                     margin-top: 0;
+                     margin-left: 0;
+                 };
+
+                 
+                
+                 
+              }
+
+              .signin {
+                display: block;
+                border: 3px solid $lblue;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 10%;
+                margin-right: 0;
+               
+                a {
+                    padding: 1.5rem;
+                }
+                
+            }
+          }
+
+          .active-page {
+              padding-bottom: 5px;
+              border-bottom: 2.5px solid $lblue;
+              transition: all 250ms;
+              &:hover {
+                border-bottom: 2.5px solid $red;
+                transition: all 250ms;
+              }
+          }
+
+          .logo {
+            margin-left: 0rem;
+            margin-right: 3rem;
+          }
+    }
+
+    @include laptop {
+        ul {
+            justify-content: flex-end;
+            margin: 0;
+            margin-left: auto;
+
+            li {
+                margin-right: 2.75rem;
+            }
+
+            .signin {
+                margin-left: 4.125rem;
+            }
+        }
+    }
+}
+
+ 

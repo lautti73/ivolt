@@ -1,0 +1,104 @@
+@import "../abstract/abstract";
+
+main {
+    width: 100%;
+    display: block;
+    padding: calc(2.5% + 1.25rem) 5%;
+    // text-align: center;
+    article {
+        text-align: center;
+        @include tabletMini {
+            text-align: start;
+        }
+    }
+
+
+    @include desktop {
+
+        display: flex;
+
+        article {
+            &:nth-of-type(1) {
+                flex: 50;
+            }
+
+            &:nth-of-type(2) {
+                flex: 50;
+            }
+        }
+    }
+
+    @include desktopFhd {
+
+        display: flex;
+
+        article {
+            &:nth-of-type(1) {
+                flex: 40;
+            }
+
+            &:nth-of-type(2) {
+                flex: 60;
+            }
+        }
+    }
+}
+
+h1 {
+    color: $dblue;
+    font-family: $title;
+    font-size: 4.5rem;
+    font-weight: 1000;
+}
+
+p {
+    font-family: $title;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $blue;
+    margin-top: 1.5rem;
+}
+
+article {
+    a {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.btn-principal {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 65px;
+    color: $white;
+    background-color: $red;
+    padding: 12px;
+    font-size: 1.55rem;
+    font-weight: 500;
+    margin: 2.5rem 0 4rem 0;
+    border: 2px solid $red;
+    &:hover {
+        color: $white ;
+        box-shadow: 2.5px 2.5px 10px black;
+        transition: 250ms;
+    }
+    
+}
+
+main {
+    @include desktop {
+        background-image: url("../img/background2.jpg");
+        background-repeat: no-repeat;
+        background-size: calc(22.5% + 20rem);
+        background-position: 100% 75.5%;
+
+    }
+
+    @include desktopFhd {
+    background-image: url("../img/background2.jpg");
+    background-size: calc(30% + 20rem);
+    background-position: 100% 97.5%;
+    background-repeat: no-repeat;
+    }
+}

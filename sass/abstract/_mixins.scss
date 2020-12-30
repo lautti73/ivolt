@@ -1,0 +1,31 @@
+// RESPONSIVE
+
+@mixin tabletMini {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktopFhd {
+    @media only screen and (min-width: 1400px) {
+        @content;
+    }
+}
