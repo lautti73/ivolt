@@ -1,8 +1,8 @@
 @import "../abstract/abstract";
 
 footer {
+    position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
     background-color: $dblue;
     padding-top: 1.5rem;

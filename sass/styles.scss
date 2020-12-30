@@ -3,6 +3,18 @@
 @import "components/footer";
 @import "components/main";
 
+// FOOTER SIEMPRE ABAJO
+
+html {
+    position: relative;
+    min-height: 100%;
+    body {
+        margin-bottom: 264px;
+    }
+}
+
+//////////////////////////
+
 body {
     font-family: $par;
     display: block; 
