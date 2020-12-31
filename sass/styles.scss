@@ -1,56 +1,6 @@
 @import "abstract/abstract";
-@import "components/nav";
+@import "base/general";
 @import "components/footer";
-@import "components/main";
-
-// FOOTER SIEMPRE ABAJO
-
-html {
-    position: relative;
-    min-height: 100%;
-    body {
-        margin-bottom: 264px;
-    }
-}
-
-//////////////////////////
-
-body {
-    font-family: $par;
-    display: block; 
-
-    p {
-        line-height: 1.5;
-    }
-
-    img {
-        max-width: 100%;
-    }
-    
-}
-
-// LAYOUT
-@include desktop {
-
-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-
-    header {
-        grid-column: 1 / 13;
-        grid-row: 1;
-    }
-
-    main {
-        grid-column: 1 / 13 ;
-        grid-row: 2;
-    }
-
-    footer {
-        grid-column: 1 / 13;
-        grid-row: 3;
-    }
-}
-}
-
-
+@import "components/nav";
+@import "components/index-main";
+@import "layout/layout";

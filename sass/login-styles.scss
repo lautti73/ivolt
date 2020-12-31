@@ -1,0 +1,207 @@
+@import "abstract/abstract";
+@import "base/general";
+@import "components/footer";
+@import "components/nav";
+@import "layout/layout";
+
+// FOOTER STATIC
+
+
+footer {
+    position: static;
+}
+
+
+body {
+    margin-bottom: 0 !important;
+    background-color: $dblue;
+    @include tabletMini {
+        background-color: white;
+    }
+}
+
+main {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.formulario {
+    max-width: 100%;
+    margin: auto auto;
+    width: 450px;
+    height: 90vh;
+    background-color: $white;
+    border: 5px solid $dblue;
+    form {
+        padding: 5%;
+        color: $dblue;
+
+        
+    }
+}
+
+.campo {
+            
+    position: relative;
+    font-size: 1.1rem;
+
+    input {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        height: 55px;
+        outline-color: $dblue ;
+        padding: 1.3rem 1rem .4rem 1rem ;
+        &:focus {
+            + label {
+                font-size: .6rem;
+                top: .5rem
+           } 
+        }
+    }
+    
+    label {
+        position: absolute;
+        top: .9rem;
+        left: 1.1rem;
+        z-index: 1;
+        transition: font-size 100ms, top 100ms;
+    }
+}
+
+@include tabletMini {
+    main {
+        margin-top: 2.75%;
+        margin-bottom: 2.75%;
+    }
+    .formulario {
+        max-width: 90%;
+        // margin: 2.75auto;
+        width: 450px;
+        height: 550px;
+        form {
+            padding: 9.6%;
+        }
+    }
+}
+
+// .campo {
+            
+//     position: relative;
+//     font-size: 1.1rem;
+
+//     input {
+//         width: 100%;
+//         margin-bottom: 2.5rem;
+//         height: 55px;
+//         outline-color: $dblue ;
+//         padding: 1.3rem 1rem .4rem 1rem ;
+//         &:focus {
+//             + label {
+//                 font-size: .6rem;
+//                 top: .5rem
+//            } 
+//         }
+//     }
+    
+//     label {
+//         position: absolute;
+//         top: .9rem;
+//         left: 1.1rem;
+//         z-index: 1;
+//         transition: font-size 100ms, top 100ms;
+//     }
+// }
+
+h2 {
+    font-size: 2.2rem;
+    font-family: $title;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+
+.remember-group {
+    display: flex;
+
+
+
+    .remember-item {
+        flex: 1;
+
+    }
+
+    a {
+        color: $blue;
+        text-decoration: none;
+        font-size: .85rem;
+        font-weight: 500;
+        text-align: end;
+    }
+}
+
+label[for="rememberme"] {
+    color: $blue;
+    font-size: .85rem;
+    vertical-align: .094rem;
+    font-weight: 500;
+}
+
+
+
+// CLASE EFECTO PARA JAVASCRIPT
+.efecto {
+    font-size: .6rem;
+    top: .5rem !important;
+}
+
+
+
+
+// CLASE BOTON
+
+.btn-login {
+    height: 55px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.625rem;
+    padding-left: 0;
+    letter-spacing: .5px;
+}
+
+.btn-primero {
+    @extend .btn-login;
+
+    background-color: $red;
+    color: $white;
+    border: 2px solid $red ;
+    &:hover {
+        box-shadow: 0 2.5px 8px rgba($color: #000000, $alpha: .5)
+    }
+
+}
+
+.btn-segundo {
+    @extend .btn-login;
+
+    background-color: $white;
+    border: 2px solid $dblue;
+    color: $dblue;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 12px;
+    margin-bottom: 1.25rem;
+
+    &:hover {
+        color: $dblue;
+        box-shadow: inset 0px 0px 4px rgba($color: #000000, $alpha: .5);
+    }
+
+}
+
+
+
+

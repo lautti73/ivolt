@@ -1,0 +1,30 @@
+@import "../abstract/abstract";
+
+// FOOTER SIEMPRE ABAJO
+
+html {
+    position: relative;
+    min-height: 100%;
+    body {
+        margin-bottom: 264px;
+    }
+}
+
+//////////////////////////
+
+body {
+    font-family: $par;
+    display: block; 
+
+    p {
+        line-height: 1.5;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    
+}
+
+
+
