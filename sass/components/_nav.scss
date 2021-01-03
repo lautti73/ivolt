@@ -78,10 +78,42 @@
         color: $white;
     }
 
+    .carrito {
+        margin: 0 inherit;
+        display: inline-block;
+        border: none;
+        
+        img {
+            padding: 0;
+            margin: 0 inherit;
+            width: 30px;
+            filter: invert(95%);
+        }
+    }
+
    
     .logo {
-        width: 35px;
+        width: auto;
+        img {
+            width: 30px;
+        }
+
+        a {
+            display: flex;
+        }
+
+        .name {
+            display: inline-block;
+            font-family: $title;
+            font-size: 1.75rem;
+            margin-left: 5px;
+            align-self: center;
+            line-height: 1.5;
+            color: $white;
+            margin-right: 35px;
+        }
     }   
+
    
 
     .burger-btn {
@@ -101,6 +133,31 @@
         }
     
     @include tablet {
+        .logo {
+            img {
+                width: 35px;
+            }
+
+            .name {
+                font-size: 2.1rem;
+                margin-left: 7.5px;
+                margin-right: 37.5px;
+
+            }
+        }
+
+        .carrito {
+            img {
+                width: 32.5px;
+            }
+        }
+    }
+
+
+
+
+
+    @include laptop {
             flex-wrap: nowrap;
         
 
@@ -112,7 +169,7 @@
               width: 100%;
               display: flex;
               align-items: center;
-              justify-content: center;
+              justify-content: flex-end;
               li {
                   border: none;
                   margin-left: 3rem;
@@ -132,7 +189,7 @@
                 border: 3px solid $lblue;
                 margin-top: 0;
                 margin-bottom: 0;
-                margin-left: 10%;
+                margin-left: 3rem;
                 margin-right: 0;
                
                 a {
@@ -154,13 +211,37 @@
 
           .logo {
             margin-left: 0rem;
-            margin-right: 3rem;
+            margin-right: 0rem;
+            
+          }
+
+          .carrito {
+              order: 1;
+              margin-left: 3rem;
+
+              img {
+                  width: 47.5px;
+              }
           }
     }
 
-    @include laptop {
+    @include desktop {
         ul {
-            justify-content: flex-end;
+            margin: 0;
+            margin-left: auto;
+
+            li {
+                margin-right: 1.5rem;
+            }
+
+            .signin {
+                margin-left: 3.5rem;
+            }
+        }
+    }
+
+    @include desktopFhd {
+        ul {
             margin: 0;
             margin-left: auto;
 

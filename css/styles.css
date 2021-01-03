@@ -192,8 +192,45 @@ footer {
   color: #F1FAEE;
 }
 
+.navegacion .carrito {
+  margin: 0 inherit;
+  display: inline-block;
+  border: none;
+}
+
+.navegacion .carrito img {
+  padding: 0;
+  margin: 0 inherit;
+  width: 30px;
+  -webkit-filter: invert(95%);
+          filter: invert(95%);
+}
+
 .navegacion .logo {
-  width: 35px;
+  width: auto;
+}
+
+.navegacion .logo img {
+  width: 30px;
+}
+
+.navegacion .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navegacion .logo .name {
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.75rem;
+  margin-left: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  line-height: 1.5;
+  color: #F1FAEE;
+  margin-right: 35px;
 }
 
 .navegacion .burger-btn {
@@ -211,6 +248,20 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .navegacion .logo img {
+    width: 35px;
+  }
+  .navegacion .logo .name {
+    font-size: 2.1rem;
+    margin-left: 7.5px;
+    margin-right: 37.5px;
+  }
+  .navegacion .carrito img {
+    width: 32.5px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .navegacion {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -228,9 +279,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .navegacion ul li {
     border: none;
@@ -245,7 +296,7 @@ footer {
     border: 3px solid #A8DADC;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 10%;
+    margin-left: 3rem;
     margin-right: 0;
   }
   .navegacion ul .signin a {
@@ -264,15 +315,34 @@ footer {
   }
   .navegacion .logo {
     margin-left: 0rem;
-    margin-right: 3rem;
+    margin-right: 0rem;
+  }
+  .navegacion .carrito {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-left: 3rem;
+  }
+  .navegacion .carrito img {
+    width: 47.5px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .navegacion ul {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    margin: 0;
+    margin-left: auto;
+  }
+  .navegacion ul li {
+    margin-right: 1.5rem;
+  }
+  .navegacion ul .signin {
+    margin-left: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .navegacion ul {
     margin: 0;
     margin-left: auto;
   }
